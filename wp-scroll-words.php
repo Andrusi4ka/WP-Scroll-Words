@@ -3,7 +3,7 @@
  * Plugin Name:       WP Scroll Words
  * Plugin URI:        https://github.com/Andrusi4ka/WP-Scroll-Words
  * Description:       Large statement texts whose words light up one by one as the page scrolls, with small rounded photos between the words. Build them under WP Scroll Words and insert them with a shortcode or the WPBakery element.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Relevant AS
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'WPSW_VERSION', '1.0.0' );
+define( 'WPSW_VERSION', '1.0.1' );
 define( 'WPSW_REPOSITORY', 'https://github.com/Andrusi4ka/WP-Scroll-Words/' );
 define( 'WPSW_POST_TYPE', 'wpsw_text' );
 define( 'WPSW_FILE', __FILE__ );

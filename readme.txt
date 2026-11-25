@@ -4,7 +4,7 @@ Tags: scroll, text, animation, lightbox, wpbakery
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ WP Scroll Words adds a "WP Scroll Words" menu where you write texts and show the
 * Deleting the plugin removes its texts and settings. Photos stay in the media library.
 
 == Changelog ==
+
+= 1.0.1 =
+* Fix: with "Open photos in lightbox" on, the photos hung below the line and pushed the lines apart; they now sit on the line as without it.
 
 = 1.0.0 =
 * First version: texts with photos between the words, lit up on scroll; text style per text (font, weight, size per device, color, tag, dimmed opacity, extra class name); lightbox; WPBakery element with Edit / Add text; roles; updates from GitHub.
