@@ -1,0 +1,91 @@
+/* WP Scroll Words */
+
+.wpsw {
+	font-family: var(--wpsw-font, inherit);
+	font-size: var(--wpsw-size, 72px);
+	font-weight: var(--wpsw-weight, 400);
+	color: var(--wpsw-color, inherit);
+	line-height: 1.08;
+	letter-spacing: -.02em;
+	margin: 0;
+}
+
+/* Tablet / mobile: their own size, or the larger screen's (same breakpoints as Woodmart) */
+@media (max-width: 1024px) {
+	.wpsw { font-size: var(--wpsw-size-t, var(--wpsw-size, 72px)); }
+}
+@media (max-width: 767px) {
+	.wpsw { font-size: var(--wpsw-size-m, var(--wpsw-size-t, var(--wpsw-size, 72px))); }
+}
+
+.wpsw a {
+	color: inherit;
+}
+
+/* Photos: em units, so they grow with the text */
+.wpsw .wpsw-pill {
+	display: inline-block;
+	width: 1.9em;
+	height: .82em;
+	max-width: none;
+	margin: 0 .06em;
+	border-radius: 999px;
+	object-fit: cover;
+	vertical-align: -.04em;
+	transition: transform .8s cubic-bezier(.22, 1, .36, 1), opacity .5s;
+}
+
+/* Lightbox on: the photo inside a button (theme button styles reset) */
+.wpsw .wpsw-zoom,
+.wpsw .wpsw-zoom:hover,
+.wpsw .wpsw-zoom:focus {
+	display: inline-block;
+	width: auto;
+	height: auto;
+	min-width: 0;
+	min-height: 0;
+	margin: 0 .06em;
+	padding: 0;
+	border: 0;
+	border-radius: 999px;
+	background: none;
+	box-shadow: none;
+	color: inherit;
+	font: inherit;
+	letter-spacing: inherit;
+	text-transform: none;
+	line-height: 0;
+	vertical-align: -.04em;
+	cursor: zoom-in;
+}
+.wpsw .wpsw-zoom .wpsw-pill {
+	margin: 0;
+	vertical-align: top;
+}
+.wpsw .wpsw-zoom:focus-visible {
+	outline: 2px solid currentColor;
+	outline-offset: 3px;
+}
+
+/* Dimmed only once the script runs: without JS everything is visible */
+.wpsw.is-ready .wpsw-w {
+	opacity: var(--wpsw-dim, .14);
+	transition: opacity .35s ease;
+}
+.wpsw.is-ready .wpsw-pill {
+	opacity: 0;
+	transform: scale(0) rotate(-12deg);
+}
+.wpsw.is-ready .lit {
+	opacity: 1;
+	transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wpsw.is-ready .wpsw-w,
+	.wpsw.is-ready .wpsw-pill {
+		opacity: 1;
+		transform: none;
+		transition: none;
+	}
+}
